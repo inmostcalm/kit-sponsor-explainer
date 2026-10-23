@@ -3,7 +3,12 @@ const SOURCES = {
   sc: { name: "Score and Change – Overview of the 2026/2027 Premier League sponsors", url: "https://www.scoreandchange.com/overview-of-the-2026-2027-premier-league-sponsors/" },
   mff: { name: "My Football Facts – Premier League Shirt Sponsors by Season (1992-93 to 2026-27)", url: "https://www.myfootballfacts.com/premier-league/all-time-premier-league/premier-league-shirt-sponsors/premier-league-shirt-sponsors/" },
   bbc: { name: "BBC Sport – Chelsea shirt sponsor Circle", url: "https://www.bbc.com/sport/football/articles/ck98z4zj119qo" },
-  fl: { name: "FootyLogos – Premier League 2026-27 kits", url: "https://www.footylogos.com/football-kits/premier-league-2026-27" }
+  fl: { name: "FootyLogos – Premier League 2026-27 kits", url: "https://www.footylogos.com/football-kits/premier-league-2026-27" },
+  pl_avfc: { name: "Premier League – Aston Villa announce Visit Rwanda partnership", url: "https://www.premierleague.com/en/news/4679460/aston-villa-announce-visit-rwanda-partnership" },
+  bbc_avfc: { name: "BBC Sport – Visit Rwanda becomes Aston Villa front-of-shirt sponsor", url: "https://www.bbc.co.uk/sport/football/articles/c3dydped4gmo" },
+  ft: { name: "Football Today – Premier League 2026/27 sponsorship landscape (2 Jul 2026)", url: "https://footballtoday.com/2026/07/03/premier-league-2026-27-sponsorship-landscape-undergoes-significant-change/" },
+  iwf_safc: { name: "Inside World Football – Sunderland front-of-shirt still open (14 Sep 2026)", url: "https://www.insideworldfootball.com/2026/09/14/shuffle-take-sunderlands-sleeve-slot-but-front-of-shirt-still-open/" },
+  sb_safc: { name: "SportBusiness – Sunderland's Visit Ghana deal 'not likely to proceed'", url: "https://www.sportbusiness.com/organisation/sunderland/" }
 };
 const CLUBS = [
  { club:"Chelsea", zh:"切尔西", sponsor:"USDC by Circle", industry:{en:"Crypto / stablecoins",zh:"加密货币 / 稳定币"}, src:["sc","bbc"],
@@ -40,5 +45,32 @@ const CLUBS = [
    money:{en:"Open-source core; sells a hosted cloud service billed by usage.",zh:"核心代码开源，靠按用量收费的云托管服务赚钱。"}},
  { club:"Fulham", zh:"富勒姆", sponsor:"ClickHouse", industry:{en:"Database software",zh:"数据库软件"}, src:["sc","fl"],
    what:{en:"A very fast open-source database used to analyse huge amounts of data in real time.",zh:"一款速度极快的开源数据库，用来实时分析海量数据。"},
-   money:{en:"Sells ClickHouse Cloud, a managed version companies pay for by usage.",zh:"卖托管版 ClickHouse Cloud，企业按用量付费。"}}
+   money:{en:"Sells ClickHouse Cloud, a managed version companies pay for by usage.",zh:"卖托管版 ClickHouse Cloud，企业按用量付费。"}},
+ { club:"Aston Villa", zh:"阿斯顿维拉", sponsor:"Visit Rwanda", industry:{en:"Tourism / country promotion",zh:"旅游 / 国家形象推广"}, src:["pl_avfc","bbc_avfc"],
+   what:{en:"Rwanda's national tourism brand, run by the Rwanda Development Board, promoting travel, investment and business events.",zh:"卢旺达国家旅游品牌，由卢旺达发展局运营，推广旅游、投资和商务会展。"},
+   money:{en:"A government body: the deal is paid for to attract tourists and investors, whose spending grows Rwanda's economy.",zh:"它是政府机构，花钱做赞助是为了吸引游客和投资者，靠他们的消费带动卢旺达经济。"}},
+ { club:"Bournemouth", zh:"伯恩茅斯", sponsor:"Vitality", industry:{en:"Health & life insurance",zh:"健康和人寿保险"}, src:["sc","ft"],
+   what:{en:"A UK health and life insurer that rewards customers for staying active.",zh:"英国健康和人寿保险公司，客户多运动就能得到奖励。"},
+   money:{en:"Insurance premiums; healthier customers mean fewer claims.",zh:"收保费；客户越健康，理赔越少，利润越高。"}},
+ { club:"Brentford", zh:"布伦特福德", sponsor:"Indeed", industry:{en:"Tech / job search",zh:"科技 / 招聘网站"}, src:["sc","ft"],
+   what:{en:"One of the world's biggest job-search websites.",zh:"全球最大的求职招聘网站之一。"},
+   money:{en:"Employers pay to promote job ads and access candidates.",zh:"企业付费推广招聘广告、查找求职者。"}},
+ { club:"Coventry City", zh:"考文垂", sponsor:"Monzo", industry:{en:"Fintech / digital bank",zh:"金融科技 / 数字银行"}, src:["sc","ft"],
+   what:{en:"A UK app-only bank with current accounts, savings and loans.",zh:"英国纯手机 App 银行，提供活期账户、储蓄和贷款。"},
+   money:{en:"Card fees paid by merchants, interest on loans and deposits, paid subscription plans.",zh:"商户刷卡手续费、贷款和存款利差，以及付费会员订阅。"}},
+ { club:"Hull City", zh:"赫尔城", sponsor:"Corendon Airlines", industry:{en:"Airline / travel",zh:"航空 / 旅游"}, src:["ft","fl"],
+   what:{en:"A Turkish leisure airline and tour operator flying holidaymakers to sun destinations.",zh:"土耳其的度假航空公司兼旅行社，主要送游客去阳光度假地。"},
+   money:{en:"Sells flights and package holidays.",zh:"卖机票和度假套餐。"}},
+ { club:"Ipswich Town", zh:"伊普斯维奇", sponsor:"Halo", industry:{en:"Tech / business software",zh:"科技 / 企业软件"}, src:["sc","ft"],
+   what:{en:"A UK company making IT service-management software (help desks, ticketing) for organisations.",zh:"英国公司，做企业 IT 服务管理软件（服务台、工单系统）。"},
+   money:{en:"Software subscriptions sold to businesses.",zh:"向企业卖软件订阅。"}},
+ { club:"Leeds United", zh:"利兹联", sponsor:"Red Bull", industry:{en:"Beverages / energy drinks",zh:"饮料 / 能量饮料"}, src:["sc","ft"],
+   what:{en:"The Austrian energy-drink company, also a big owner of sports teams; it is a part-owner of Leeds.",zh:"奥地利能量饮料公司，也是大型体育球队投资方，持有利兹联部分股份。"},
+   money:{en:"Selling billions of cans a year; sport and media are its marketing engine.",zh:"每年卖出数十亿罐饮料，体育和媒体是它的营销引擎。"}},
+ { club:"Nottingham Forest", zh:"诺丁汉森林", sponsor:"Marex", industry:{en:"Financial services / brokerage",zh:"金融服务 / 经纪商"}, src:["sc","mff"],
+   what:{en:"A London-based broker for commodities (metals, energy, crops) and other financial markets.",zh:"总部在伦敦的经纪商，做大宗商品（金属、能源、农产品）等金融市场交易。"},
+   money:{en:"Commissions and fees for executing and clearing clients' trades, plus interest on client balances.",zh:"帮客户执行和清算交易收佣金和手续费，再加上客户资金的利息。"}},
+ { club:"Sunderland", zh:"桑德兰", sponsor:"Not confirmed yet", unverified:true, industry:{en:"Unconfirmed",zh:"未确认"}, src:["iwf_safc","sb_safc"],
+   what:{en:"As of mid-September 2026 Sunderland had no announced front-of-shirt sponsor; a Visit Ghana deal was reported unlikely to proceed. Shuffle (betting/crypto casino) is only the sleeve sponsor.",zh:"截至 2026 年 9 月中旬，桑德兰还没宣布胸前赞助商；此前传的 Visit Ghana 合作据报道很可能告吹。Shuffle（博彩/加密赌场）只是袖标赞助商。"},
+   money:{en:"Check the club's official site for updates.",zh:"请以俱乐部官网最新公告为准。"}}
 ];
